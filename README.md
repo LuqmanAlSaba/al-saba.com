@@ -1,3 +1,3 @@
 <div align="center">
-    <img src="img/branding/logo.svg" alt="Al-Saba" width="200">
+    <img src="img/branding/al-saba.svg" alt="Al-Saba" width="200">
 </div>
