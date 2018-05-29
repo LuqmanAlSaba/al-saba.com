@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Luke Al-Saba | Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Luke Al-Saba">
+    <meta name="copyright" content="Luke Al-Saba">
+    <meta name="description"
+          content="Luke Al-Saba is a computer science student/developer at the University of Kentucky.">
+    <meta name="image" content="img/branding/al-saba.png">
+    <meta name="keywords" content="luke al-saba, luqman al-saba, lukealsaba, portfolio, developer, web-developer, programmer,
+                                   front-end, back-end, computer science, html, css, javascript, php, python, design,
+                                   kentucky, louisville, student, university of kentucky">
+
+    <link rel="shortcut icon" href="img/branding/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119254721-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-119254721-1');
+    </script>
+</head>
+<body>
+
+<!-- home section -->
+<header class="home container" role="banner">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-light navbar-expand-lg sticky-top p-4" role="navigation">
+        <a class="navbar-brand" href="https://al-saba.com/">
+            <img src="img/branding/al-saba.svg" alt="Al-Saba">
+        </a>
+        <div id="navbar-content" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li id="home" class="nav-item">Home</li>
+                <li id="projects" class="nav-item">Projects</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- home section content -->
+    <div class="container">
+        <div class="row">
+            <!-- introduction -->
+            <div class="col-xs-12 col-md-6">
+                <h1 class="col-12 mb-3">Hi, I'm <span>Luke Al-Saba</span></h1>
+                <p class="col-12">A student & developer studying computer science at the University of Kentucky.</p>
+            </div>
+            <!-- background image -->
+            <img class="bg-img" src="img/illustrations/background.svg" alt="">
+            <!-- three.js container -->
+            <div id="webgl" class="col-xs-12 col-md-6"></div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- projects section -->
+    <section class="projects">
+        <div class="row mt-5">
+            <h2 class="col-12 mb-3">My projects.</h2>
+            <p class="col-xs-12 col-md-6">Here are some of the projects that I have contributed to and or
+                started.</p>
+        </div>
+        <!-- projects -->
+        <div class="row my-5">
+            <a id="betnano" class="col-xs-12 col-md-7 project" href="https://betnano.win/" target="_blank"
+               rel="noopener">
+                <img src="img/projects/betnano.svg" class="mx-auto d-block" alt="betnano">
+            </a>
+            <a id="c4sg" class="col-xs-12 col-md-5 project" href="https://app.code4socialgood.org/" target="_blank"
+               rel="noopener">
+                <img src="img/projects/c4sg.svg" class="mx-auto d-block" alt="Code for Social Good">
+            </a>
+            <a id="al-saba" class="col-12 project" href="https://al-saba.com/" target="_blank" rel="noopener">
+                <img src="img/branding/al-saba.svg" class="mx-auto d-block" alt="Al-Saba">
+            </a>
+        </div>
+    </section>
+
+    <hr class="mb-3">
+
+    <!-- footer -->
+    <footer class="row" role="contentinfo">
+        <ul class="col-xs-12 col-md-8">
+            <li><a href="https://twitter.com/LukeAlSaba/" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://plus.google.com/u/0/+LukeAlSaba/" target="_blank" rel="noopener">Google+</a></li>
+            <li><a href="https://www.facebook.com/LukeAlSaba" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/LukeAlSaba/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/LukeAlSaba/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/LukeAlSaba/" target="_blank" rel="noopener">Github</a></li>
+            <li><a href="https://dribbble.com/LukeAlSaba/" target="_blank" rel="noopener">Dribbble</a></li>
+        </ul>
+        <div id="copyright" class="col-sm-12 col-md-4 text-md-right"></div>
+    </footer>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    // scrolls to section based on the clicked nav button
+    $("li").click(function () {
+        $("html").animate({scrollTop: $("." + this.id).offset().top}, "slow");
+    });
+    // inserts copyright notice
+    $("#copyright").html("&copy " + new Date().getFullYear() + " Luke Al-Saba");
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
+<script src="js/webgl.min.js"></script>
+<script type="application/ld+json">
+[
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Luke Al-Saba",
+  "url": "https://al-saba.com",
+  "sameAs": [
+  	"https://twitter.com/LukeAlSaba/",
+  	"https://plus.google.com/u/0/+LukeAlSaba/",
+    "https://www.facebook.com/LukeAlSaba/",
+    "https://instagram.com/LukeAlSaba/",
+    "https://www.linkedin.com/in/LukeAlSaba/",
+    "https://www.github.com/LukeAlSaba/",
+    "https://dribbble.com/LukeAlSaba/"
+  ]
+},
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://al-saba.com",
+  "logo": "https://al-saba.com/branding/al-saba.png"
+}
+]
+
+</script>
+</body>
+</html>

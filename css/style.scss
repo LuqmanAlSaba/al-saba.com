@@ -1,0 +1,179 @@
+$green: #74de8e;
+$black: #444;
+$white: #fff;
+$gray: #747577;
+$betnano: #00aaea;
+$cs4g: #f25d5c;
+$al-saba: #70f59c;
+
+*:not(.bg-img){
+  z-index: 1;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: left;
+  background: $white;
+  color: $black;
+}
+
+span {
+  white-space: nowrap;
+}
+
+.bg-img {
+  position: absolute;
+  height: 136vh;
+  top: -18vh;
+  right: -14vw;
+}
+
+/* ==================== */
+/* ==== containers ==== */
+/* ==================== */
+
+header {
+  height: 100vh;
+}
+
+section {
+  padding: 3em 0;
+}
+
+#webgl {
+  height: 50vh;
+  margin-top: 12vh;
+}
+
+/* ======================== */
+/* ==== navigation bar ==== */
+/* ======================== */
+
+nav img {
+  height: 2.5em;
+}
+
+nav li {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+nav li:hover {
+  cursor: pointer;
+  color: $black + 20;
+}
+
+nav li + li {
+  margin-left: 2em;
+}
+
+/* ========================= */
+/* ==== headings / text ==== */
+/* ========================= */
+
+h1 {
+  margin-top: 18vh;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.25em;
+  font-weight: 100;
+  color: $gray;
+}
+
+/* ================== */
+/* ==== projects ==== */
+/* ================== */
+
+.project {
+  padding: 16vh 0;
+  transition: all .12s ease-in-out;
+}
+
+.project:hover {
+  cursor: pointer;
+}
+
+.project img {
+  height: 6vh;
+}
+
+#betnano {
+  background: $betnano;
+}
+
+#c4sg{
+  background: $cs4g;
+}
+
+#al-saba {
+  background: $al-saba;
+}
+
+#betnano:hover {
+  background: $betnano + 20;
+}
+
+#c4sg:hover {
+  background: $cs4g + 20;
+}
+
+#al-saba:hover {
+  background: $al-saba + 20;
+}
+
+/* ================ */
+/* ==== footer ==== */
+/* ================ */
+
+footer {
+  padding-bottom: 1em;
+  font-size: 1em;
+  color: $gray;
+}
+
+footer li {
+  display: inline;
+  margin-right: 1.5em;
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: $gray;
+}
+
+footer a:hover {
+  color: $gray - 32;
+}
+
+/* ======================= */
+/* ==== media queries ==== */
+/* ======================= */
+
+/* smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 6vh;
+    font-size: 2em;
+  }
+
+  footer ul,
+  footer div {
+    text-align: center;
+  }
+
+  #webgl {
+    margin-top: 0;
+    height: 42vh;
+  }
+}
