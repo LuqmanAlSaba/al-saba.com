@@ -1,9 +1,9 @@
 // global variables
 let renderer, scene, camera, logo, logoGroup1, logoGroup2, orbitingCubes, i;
 // webgl container
-const container = document.getElementById('webgl');
+const CONTAINER = document.getElementById('webgl');
 // cube material
-const material = new THREE.MeshPhongMaterial({
+const MATERIAL = new THREE.MeshPhongMaterial({
     color: 0xeaebed,
     specular: 0x050505,
     shininess: 100
@@ -26,20 +26,20 @@ function animate() {
 
 function setup() {
     renderer = new THREE.WebGLRenderer({alpha: true});
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
+    renderer.setSize(CONTAINER.offsetWidth, CONTAINER.offsetHeight);
     renderer.setPixelRatio(2);
-    container.appendChild(renderer.domElement);
+    CONTAINER.appendChild(renderer.domElement);
 
     scene = new THREE.Scene();
     renderer.setClearColor(0x000000, 0);
 
-    camera = new THREE.PerspectiveCamera(20, container.offsetWidth / container.offsetHeight, 1, 70);
+    camera = new THREE.PerspectiveCamera(20, CONTAINER.offsetWidth / CONTAINER.offsetHeight, 1, 70);
     camera.position.set(0, -6, 50);
     camera.lookAt(0, 0, 0);
 
     window.addEventListener('resize', function () {
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
-        camera.aspect = container.offsetWidth / container.offsetHeight;
+        renderer.setSize(CONTAINER.offsetWidth, CONTAINER.offsetHeight);
+        camera.aspect = CONTAINER.offsetWidth / CONTAINER.offsetHeight;
         camera.updateProjectionMatrix();
     });
 }
@@ -60,15 +60,15 @@ function createCubes() {
 
     // adds 3 cubes logoGroup1
     logoGroup1.add(
-        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), material),
-        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), material),
-        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), material));
+        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), MATERIAL));
 
     // adds 3 cubes logoGroup2
     logoGroup2.add(
-        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), material),
-        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), material),
-        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), material));
+        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), MATERIAL));
 
     // contains all orbiting cubes
     orbitingCubes = new THREE.Object3D();
@@ -76,9 +76,9 @@ function createCubes() {
 
     // adds all 3 orbiting cubes
     orbitingCubes.add(
-        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), material)),
-        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), material)),
-        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), material)));
+        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), MATERIAL)),
+        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), MATERIAL)),
+        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), MATERIAL)));
 
     // contains the entire logo (logoGroup1 & logoGroup2)
     logo = new THREE.Object3D();
