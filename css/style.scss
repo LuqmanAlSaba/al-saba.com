@@ -3,10 +3,10 @@ $black: #444;
 $white: #fff;
 $gray: #747577;
 $betnano: #00aaea;
-$cs4g: #f25d5c;
+$b-daybot: #f25d5c;
 $al-saba: #70f59c;
 
-*:not(.bg-img){
+*:not(.bg-img) {
   z-index: 1;
 }
 
@@ -111,8 +111,8 @@ p {
   background: $betnano;
 }
 
-#c4sg{
-  background: $cs4g;
+#b-daybot {
+  background: $b-daybot;
 }
 
 #al-saba {
@@ -123,8 +123,8 @@ p {
   background: $betnano + 20;
 }
 
-#c4sg:hover {
-  background: $cs4g + 20;
+#b-daybot:hover {
+  background: $b-daybot + 20;
 }
 
 #al-saba:hover {
