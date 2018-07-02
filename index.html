@@ -9,8 +9,8 @@
     <meta name="description"
           content="Luke Al-Saba is a computer science student/developer at the University of Kentucky.">
     <meta name="image" content="img/branding/al-saba.png">
-    <meta name="keywords" content="luke al-saba, luqman al-saba, lukealsaba, portfolio, developer, web-developer, programmer,
-                                   front-end, back-end, computer science, html, css, javascript, php, python, design,
+    <meta name="keywords" content="luke al-saba, luqman al-saba, al-saba, lukealsaba, portfolio, developer, web developer, programmer,
+                                   computer science, front-end, back-end, html, css, javascript, php, python, design,
                                    kentucky, louisville, student, university of kentucky">
 
     <link rel="shortcut icon" href="img/branding/favicon.ico">
@@ -42,8 +42,8 @@
         </a>
         <div id="navbar-content" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                <li id="home" class="nav-item">Home</li>
-                <li id="projects" class="nav-item">Projects</li>
+                <li class="nav-item" onclick="scroll_to_section('.home')">Home</li>
+                <li class="nav-item" onclick="scroll_to_section('.projects')">Projects</li>
             </ul>
         </div>
     </nav>
@@ -74,11 +74,11 @@
         </div>
         <!-- projects -->
         <div class="row my-5">
-            <a id="betnano" class="col-xs-12 col-md-7 project" href="https://betnano.win/" target="_blank"
+            <a id="betnano" class="col-xs-12 col-md-8 project" href="https://betnano.win/" target="_blank"
                rel="noopener">
                 <img src="img/projects/betnano.svg" class="mx-auto d-block" alt="betnano">
             </a>
-            <a id="b-daybot" class="col-xs-12 col-md-5 project" href="https://www.reddit.com/user/B-DayBot"
+            <a id="b-daybot" class="col-xs-12 col-md-4 project" href="https://github.com/LukeAlSaba/B-DayBot"
                target="_blank"
                rel="noopener">
                 <img src="img/projects/b-daybot.svg" class="mx-auto d-block" alt="Birthday Bot">
@@ -95,9 +95,9 @@
     <footer class="row" role="contentinfo">
         <ul class="col-xs-12 col-md-8">
             <li><a href="https://twitter.com/LukeAlSaba/" target="_blank" rel="noopener">Twitter</a></li>
-            <li><a href="https://plus.google.com/u/0/+LukeAlSaba/" target="_blank" rel="noopener">Google+</a></li>
             <li><a href="https://www.facebook.com/LukeAlSaba" target="_blank" rel="noopener">Facebook</a></li>
             <li><a href="https://www.instagram.com/LukeAlSaba/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://plus.google.com/+LukeAlSaba" target="_blank" rel="noopener">Google+</a></li>
             <li><a href="https://www.linkedin.com/in/LukeAlSaba/" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="https://github.com/LukeAlSaba/" target="_blank" rel="noopener">Github</a></li>
             <li><a href="https://dribbble.com/LukeAlSaba/" target="_blank" rel="noopener">Dribbble</a></li>
@@ -108,11 +108,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-    // scrolls to section based on the clicked nav button
-    $("li").click(function () {
-        $("html").animate({scrollTop: $("." + this.id).offset().top}, "slow");
-    });
-    // inserts copyright notice
+    function scroll_to_section(section){
+        $("html").animate({scrollTop: $(section).offset().top}, "slow");
+    }
     $("#copyright").html("&copy " + new Date().getFullYear() + " Luke Al-Saba");
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
@@ -126,7 +124,7 @@
   "url": "https://al-saba.com",
   "sameAs": [
   	"https://twitter.com/LukeAlSaba/",
-  	"https://plus.google.com/u/0/+LukeAlSaba/",
+  	"https://plus.google.com/+LukeAlSaba",
     "https://www.facebook.com/LukeAlSaba/",
     "https://instagram.com/LukeAlSaba/",
     "https://www.linkedin.com/in/LukeAlSaba/",
