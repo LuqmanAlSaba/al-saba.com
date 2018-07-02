@@ -41,10 +41,6 @@ function setup() {
     });
 }
 
-/* ===================== */
-/* ===== FUNCTIONS ===== */
-/* ===================== */
-
 function createCubes() {
 
     logoGroup1 = new THREE.Object3D();
