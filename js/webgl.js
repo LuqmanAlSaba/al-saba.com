@@ -1,9 +1,6 @@
-// global variables
 let renderer, scene, camera, logo, logoGroup1, logoGroup2, orbitingCubes, i;
-// webgl container
 const CONTAINER = document.getElementById('webgl');
-// cube material
-const MATERIAL = new THREE.MeshPhongMaterial({
+const CUBE_MATERIAL = new THREE.MeshPhongMaterial({
     color: 0xeaebed,
     specular: 0x050505,
     shininess: 100
@@ -50,35 +47,29 @@ function setup() {
 
 function createCubes() {
 
-    // contains 3 logo cubes
     logoGroup1 = new THREE.Object3D();
     logoGroup1.position.set(-2, 0, 0);
 
-    // contains the other 3 logo cubes
+    logoGroup1.add(
+        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), CUBE_MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), CUBE_MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), CUBE_MATERIAL));
+
     logoGroup2 = new THREE.Object3D();
     logoGroup2.position.set(2.4, -1.25, -3.5);
 
-    // adds 3 cubes logoGroup1
-    logoGroup1.add(
-        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), MATERIAL),
-        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), MATERIAL),
-        new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), MATERIAL));
-
-    // adds 3 cubes logoGroup2
     logoGroup2.add(
-        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), MATERIAL),
-        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), MATERIAL),
-        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), MATERIAL));
+        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), CUBE_MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), CUBE_MATERIAL),
+        new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.8, 1.8), CUBE_MATERIAL));
 
-    // contains all orbiting cubes
     orbitingCubes = new THREE.Object3D();
     orbitingCubes.position.set(0, 1, -3);
 
-    // adds all 3 orbiting cubes
     orbitingCubes.add(
-        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), MATERIAL)),
-        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), MATERIAL)),
-        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), MATERIAL)));
+        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), CUBE_MATERIAL)),
+        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), CUBE_MATERIAL)),
+        new THREE.Object3D().add(new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.4, 1.4), CUBE_MATERIAL)));
 
     // contains the entire logo (logoGroup1 & logoGroup2)
     logo = new THREE.Object3D();
@@ -134,22 +125,16 @@ function positionCubes() {
 
     i = 3;
     while (i--) {
-        // sets rotation for each orbiting cube
+        // sets each orbiting cubes rotation
         orbitingCubes.children[i].rotation.x = orbitingCubesArr[i].rotationX;
         orbitingCubes.children[i].rotation.y = orbitingCubesArr[i].rotationY;
 
-        // sets position for each orbiting cube
+        // positions each orbiting cube
         orbitingCubes.children[i].children[0].position.set(
             orbitingCubesArr[i].posX,
             orbitingCubesArr[i].posY,
             orbitingCubesArr[i].posZ);
     }
-}
-
-function lighting() {
-    let light = new THREE.HemisphereLight(0xeaebed, 0x000000, 2);
-    light.position.set(2, 8, .5);
-    scene.add(light);
 }
 
 // rotation/movement for orbiting cubes and the logo
@@ -166,6 +151,12 @@ function animations() {
     // logo hovering effect
     let time = new Date().getTime();
     logo.position.y = Math.sin(time / 750) * .5;
+}
+
+function lighting() {
+    let light = new THREE.HemisphereLight(0xeaebed, 0x000000, 2);
+    light.position.set(2, 8, .5);
+    scene.add(light);
 }
 
 init();
