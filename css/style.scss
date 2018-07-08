@@ -12,7 +12,6 @@ $al-saba: #59ef99;
 
 html,
 body {
-  overflow-x: hidden;
   font-family: "Source Sans Pro", sans-serif;
   text-align: left;
   background: $white;
@@ -25,9 +24,9 @@ span {
 
 .bg-img {
   position: absolute;
-  height: 125vh;
+  height: 120vh;
   top: -10vh;
-  right: -4vw;
+  right: 0;
 }
 
 /* ==================== */
