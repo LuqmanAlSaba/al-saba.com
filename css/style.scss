@@ -18,7 +18,7 @@ body {
   color: $black;
 }
 
-.bg-img {
+.background {
   position: absolute;
   height: 120vh;
   top: -10vh;
@@ -34,7 +34,7 @@ header {
 }
 
 section {
-  padding: 2.25em 0;
+  padding: 2em 0;
 }
 
 #webgl {
@@ -51,6 +51,7 @@ nav img {
 }
 
 nav li {
+  margin-left: 2em;
   font-size: 1em;
   font-weight: 600;
 }
@@ -58,10 +59,6 @@ nav li {
 nav li:hover {
   cursor: pointer;
   color: $black + 20;
-}
-
-nav li + li {
-  margin-left: 2em;
 }
 
 /* ========================= */
@@ -94,7 +91,7 @@ span {
 /* ================== */
 
 .project {
-  padding: 14vh 0;
+  padding: 13vh 0;
   transition: all .12s ease-in-out;
 }
 
@@ -171,7 +168,7 @@ footer a:hover {
   }
 
   #webgl {
-    margin-top: 0;
     height: 42vh;
+    margin-top: 0;
   }
 }
