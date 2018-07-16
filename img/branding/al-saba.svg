@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 359.19 110.59" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <style>.cls-1{fill:#2d2d2d;}.cls-4{fill:#111111;}.cls-1,.cls-2,.cls-3{fill-rule:evenodd;}.cls-2{fill:#1ff2b1;}.cls-3{fill:#138e70;}</style>
+        <style>.cls-1{fill:#2d2d2d;}.cls-4{fill:#111111;}.cls-1,.cls-2,.cls-3{fill-rule:evenodd;}.cls-2{fill:#ffffff;}.cls-3{fill:#d8d8d8;}</style>
     </defs>
     <polygon class="cls-4" points="70.11 50.76 81.73 51.55 87.55 51.94 96.77 43.28 79.96 40.2"/>
     <path class="cls-4" transform="translate(-123.48 -214.98)" d="M195,265.19l15.83,1.07,8.1-7.61-15.23-2.79-8.7,9.33Zm10.2,2-11.63-.79a.6.6,0,0,1-.39-.17.64.64,0,0,1,0-.9L203,254.74a.65.65,0,0,1,.58-.19l16.82,3.08a.58.58,0,0,1,.35.19.64.64,0,0,1,0,.9l-9.2,8.64a.66.66,0,0,1-.5.19Z"/>
