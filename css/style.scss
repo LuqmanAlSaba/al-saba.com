@@ -1,12 +1,12 @@
 $green: #74de8e;
 $black: #444;
 $white: #fff;
-$gray: #747577;
+$gray: #6e6f71;
 $betnano: #5babf1;
 $b-daybot: #f25d5c;
 $al-saba: #59ef99;
 
-*:not(.bg-img) {
+*:not(.background) {
   z-index: 1;
 }
 
@@ -20,8 +20,8 @@ body {
 
 .background {
   position: absolute;
-  height: 120vh;
-  top: -10vh;
+  height: 110vh;
+  top: 0;
   right: 0;
 }
 
@@ -67,17 +67,17 @@ nav li:hover {
 
 h1 {
   margin-top: 18vh;
-  font-size: 3em;
+  font-size: 3.25em;
   font-weight: bolder;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 600;
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 100;
   color: $gray;
 }
@@ -159,7 +159,11 @@ footer a:hover {
 @media (max-width: 768px) {
   h1 {
     margin-top: 6vh;
-    font-size: 2em;
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2.25em;
   }
 
   footer ul,
@@ -168,7 +172,7 @@ footer a:hover {
   }
 
   #webgl {
-    height: 42vh;
+    height: 40vh;
     margin-top: 0;
   }
 }
