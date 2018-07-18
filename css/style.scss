@@ -4,7 +4,7 @@ $white: #fff;
 $gray: #6e6f71;
 $betnano: #5babf1;
 $b-daybot: #f25d5c;
-$al-saba: #59ef99;
+$al-saba: #5bf1a7;
 
 *:not(.background) {
   z-index: 1;
@@ -21,6 +21,7 @@ body {
 .background {
   position: absolute;
   height: 110vh;
+  min-height: 400px;
   top: 0;
   right: 0;
 }
@@ -39,6 +40,7 @@ section {
 
 #webgl {
   height: 50vh;
+  min-height: 200px;
   margin-top: 12vh;
 }
 
@@ -91,7 +93,9 @@ span {
 /* ================== */
 
 .project {
-  padding: 13vh 0;
+  height: 30vh;
+  max-height: 250px;
+  min-height: 125px;
   transition: all .12s ease-in-out;
 }
 
@@ -100,7 +104,9 @@ span {
 }
 
 .project img {
-  height: 6vh;
+  height: 6.5vh;
+  max-height: 50px;
+  min-height: 25px;
 }
 
 #betnano {
