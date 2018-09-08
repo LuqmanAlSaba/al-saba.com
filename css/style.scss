@@ -5,6 +5,7 @@ $gray: #6e6f71;
 $betnano: #5babf1;
 $b-daybot: #f25d5c;
 $al-saba: #5bf1a7;
+$overwatch-league: #4A4C4E;
 
 *:not(.background) {
   z-index: 1;
@@ -106,7 +107,7 @@ span {
 .project img {
   height: 6.5vh;
   max-height: 50px;
-  min-height: 25px;
+  min-height: 32px;
 }
 
 #betnano {
@@ -131,6 +132,20 @@ span {
 
 #al-saba:hover {
   background: $al-saba + 20;
+}
+
+#overwatch-league {
+  background: $overwatch-league;
+}
+
+#overwatch-league:hover {
+  background: $overwatch-league + 20;
+}
+
+#overwatch-league img {
+  height: 18vh;
+  max-height: 150px;
+  min-height: 75px;
 }
 
 /* ================ */
