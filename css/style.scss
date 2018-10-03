@@ -1,4 +1,4 @@
-$green: #74de8e;
+$green: #42e38e;
 $black: #444;
 $white: #fff;
 $gray: #6e6f71;
@@ -87,6 +87,31 @@ p {
 
 span {
   white-space: nowrap;
+}
+
+button {
+  padding: 6px;
+  border-radius: 4px;
+  border: 0 none;
+  cursor: pointer;
+  transition: all 150ms linear;
+  background: $green;
+  color: $white;
+}
+
+button:hover {
+  transition: all 150ms linear;
+  opacity: .85;
+}
+
+button:active {
+  transition: all 150ms linear;
+  opacity: .75;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
 }
 
 /* ================== */
