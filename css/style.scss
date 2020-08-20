@@ -5,7 +5,7 @@ $gray: #6e6f71;
 $betnano: #5babf1;
 $b-daybot: #f25d5c;
 $al-saba: #5bf1a7;
-$overwatch-league: #4A4C4E;
+$leagueoflegends: #f8f1eb;
 
 *:not(.background) {
   z-index: 1;
@@ -159,15 +159,15 @@ button:focus {
   background: $al-saba + 20;
 }
 
-#overwatch-league {
-  background: $overwatch-league;
+#leagueoflegends {
+  background: $leagueoflegends;
 }
 
-#overwatch-league:hover {
-  background: $overwatch-league + 20;
+#leagueoflegends:hover {
+  background: $leagueoflegends + 10;
 }
 
-#overwatch-league img {
+#leagueoflegends img {
   height: 18vh;
   max-height: 150px;
   min-height: 75px;
